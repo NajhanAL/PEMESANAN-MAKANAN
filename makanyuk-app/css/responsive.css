@@ -1,0 +1,354 @@
+/* ===== RESPONSIVE STYLES ===== */
+
+/* Large Devices (Desktop) */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .menu-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}
+
+/* Medium Devices (Tablets) */
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--space-xl);
+    }
+    
+    .hero-content {
+        max-width: 100%;
+    }
+    
+    .hero-actions {
+        justify-content: center;
+    }
+    
+    .nav-menu {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: var(--space-sm);
+    }
+    
+    .nav-item {
+        min-width: 70px;
+        padding: var(--space-sm) var(--space-md);
+        font-size: 0.9rem;
+    }
+    
+    .nav-item i {
+        font-size: 1rem;
+    }
+    
+    .cart-sidebar {
+        width: 350px;
+    }
+}
+
+/* Small Devices (Phones Landscape) */
+@media (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    .header-top {
+        flex-direction: column;
+        gap: var(--space-md);
+        text-align: center;
+    }
+    
+    .logo {
+        justify-content: center;
+    }
+    
+    .user-info {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-text {
+        padding: var(--space-lg);
+    }
+    
+    .category-btn {
+        min-width: 100px;
+        padding: var(--space-sm) var(--space-md);
+        font-size: 0.9rem;
+    }
+    
+    .menu-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: var(--space-lg);
+    }
+    
+    .cart-sidebar {
+        width: 100%;
+        right: -100%;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--space-md);
+    }
+}
+
+/* Extra Small Devices (Phones Portrait) */
+@media (max-width: 576px) {
+    .container {
+        padding: 0 var(--space-md);
+    }
+    
+    .nav-menu {
+        position: relative;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: var(--radius-sm);
+    }
+    
+    .nav-item span {
+        display: none;
+    }
+    
+    .nav-item {
+        padding: var(--space-sm);
+        min-width: auto;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .welcome-box {
+        padding: var(--space-sm) var(--space-lg);
+        font-size: 0.9rem;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .category-filter {
+        gap: var(--space-xs);
+    }
+    
+    .category-btn {
+        min-width: 80px;
+        padding: var(--space-xs) var(--space-sm);
+        font-size: 0.8rem;
+    }
+    
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .menu-card {
+        max-width: 100%;
+    }
+    
+    .cart-toggle {
+        right: var(--space-md);
+        bottom: var(--space-md);
+        width: 60px;
+        height: 60px;
+        font-size: 1.2rem;
+    }
+    
+    .cart-header h3 {
+        font-size: 1.2rem;
+    }
+    
+    .cart-item {
+        flex-wrap: wrap;
+    }
+    
+    .cart-item-image {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .cart-item-details {
+        min-width: 150px;
+    }
+}
+
+/* Very Small Devices */
+@media (max-width: 375px) {
+    .hero-title {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .menu-title {
+        font-size: 1.1rem;
+    }
+    
+    .menu-price {
+        font-size: 1.2rem;
+    }
+    
+    .footer-title {
+        font-size: 1.1rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .cart-toggle,
+    .cart-sidebar,
+    .mobile-menu-btn,
+    .btn,
+    .add-to-cart,
+    .category-filter,
+    footer {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+    
+    header {
+        position: static !important;
+        background: white !important;
+        color: black !important;
+        box-shadow: none !important;
+    }
+    
+    .nav-menu {
+        display: none !important;
+    }
+    
+    .hero {
+        background: white !important;
+        min-height: auto !important;
+    }
+    
+    .hero-image {
+        display: none !important;
+    }
+    
+    .menu-grid {
+        display: block !important;
+    }
+    
+    .menu-card {
+        break-inside: avoid;
+        margin-bottom: 20px;
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+    }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    :root {
+        --primary: #000000;
+        --secondary: #333333;
+        --light: #FFFFFF;
+        --dark: #000000;
+    }
+    
+    .btn {
+        border: 2px solid var(--dark);
+    }
+    
+    .menu-card {
+        border: 2px solid var(--dark);
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .hero-img,
+    .menu-image img {
+        animation: none !important;
+    }
+    
+    .btn:hover,
+    .menu-card:hover,
+    .cart-toggle:hover {
+        transform: none !important;
+    }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --light: #1A1A1A;
+        --light-alt: #2D2D2D;
+        --dark: #FFFFFF;
+        --dark-light: #E0E0E0;
+        --white: #2D2D2D;
+        --gray-light: #404040;
+    }
+    
+    body {
+        background-color: var(--light);
+        color: var(--dark);
+    }
+    
+    .menu-card,
+    .hero-text,
+    .cart-sidebar {
+        background: var(--white);
+    }
+    
+    .cart-footer {
+        background: var(--light-alt);
+    }
+}
